@@ -7,6 +7,7 @@ navBarContainer.forEach(element => {
 })
 
 
+
 const navBar = document.querySelectorAll('.nav-link')
 
 navBar.forEach(element => {
@@ -49,5 +50,44 @@ imgContent.forEach(element => {
 
 
 
+const destinationShadow = document.querySelectorAll('.destination')
 
+destinationShadow.forEach(element => {
+    element.addEventListener('mouseenter', () => {
+        element.style.transform = 'scale(1.05)';
+        element.style.borderRadius = '15px';
+        element.style.boxShadow = '-10px 10px 10px grey';
+        element.style.transition = 'all 0.3s';
+    })
+
+    element.addEventListener('mouseleave', () => {
+        element.style.transform = 'scale(1)';
+        element.style.borderRadius = '15px';
+        element.style.boxShadow = 'none';
+        element.style.transition = 'all 0.3s';
+    })
+})
+
+const h4Change = document.querySelectorAll('h4, h2')
+
+h4Change.forEach(element => {
+    element.addEventListener('click', () => {
+        element.style.color = 'crimson';
+        element.style.transition = 'all 0.3s';
+    })
+
+    element.addEventListener('dblclick', () => {
+        element.style.color = 'black';
+        element.style.transition = 'all 0.3s';
+    })
+})
+
+const buttonColorInvert = document.querySelectorAll('.btn')
+
+buttonColorInvert.forEach(element => {
+    element.addEventListener('click', () => {
+        element.style.color = 'black';
+        element.style.transition = 'all 0.3s';
+    })
+})
 
