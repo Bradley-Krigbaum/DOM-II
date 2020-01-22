@@ -11,7 +11,7 @@ navBarContainer.forEach(element => {
 const navBar = document.querySelectorAll('.nav-link')
 
 navBar.forEach(element => {
-    element.addEventListener('mouseover', () => {
+    element.addEventListener('mousemove', () => {
         element.style.transform = "scale(1.1)";
         element.style.color = 'crimson';
         element.style.transition = "all 0.3s";
@@ -42,7 +42,7 @@ imgContent.forEach(element => {
         element.style.transition = "all 0.3s";
     })
 
-    element.addEventListener('mouseleave', () => {
+    element.addEventListener('mouseout', () => {
         element.style.transform = 'scale(1)';
         element.style.transition = 'all 0.3s';
     })
@@ -71,12 +71,12 @@ destinationShadow.forEach(element => {
 const h4Change = document.querySelectorAll('h4, h2')
 
 h4Change.forEach(element => {
-    element.addEventListener('click', () => {
+    element.addEventListener('mousedown', () => {
         element.style.color = 'crimson';
         element.style.transition = 'all 0.3s';
     })
 
-    element.addEventListener('dblclick', () => {
+    element.addEventListener('mouseup', () => {
         element.style.color = 'black';
         element.style.transition = 'all 0.3s';
     })
@@ -85,9 +85,22 @@ h4Change.forEach(element => {
 const buttonColorInvert = document.querySelectorAll('.btn')
 
 buttonColorInvert.forEach(element => {
-    element.addEventListener('click', () => {
-        element.style.color = 'black';
+    element.addEventListener('contextmenu', () => {
+        element.style.backgroundColor = 'lightgrey';
         element.style.transition = 'all 0.3s';
     })
 })
 
+const footerChange = document.querySelectorAll('.footer p')
+
+footerChange.forEach(element => {
+    element.addEventListener('click', () => {
+        element.style.transform = 'scale(3)';
+        element.style.transition = 'all 0.3s';
+    })
+
+    element.addEventListener('wheel', () => {
+        element.style.transform = 'scale(1)';
+        element.style.transition = 'all 0.3s';
+    })
+})
